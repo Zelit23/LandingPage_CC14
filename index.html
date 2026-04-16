@@ -66,6 +66,32 @@
       cursor: pointer;
     }
 
+     /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 50px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero img {
+      width: 40%;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: red;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
     </style>
 </head>
 
@@ -83,4 +109,14 @@
   </nav>
 </header>
 
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h2>Race Into The Future of Esports</h2>
+    <p>Join the ultimate F1 Esports competition.</p>
+    <button onclick="joinNow()">Join Now</button>
+  </div>
+  <img src="https://media.formula1.com/image/upload/t_16by9Centre/c_lfill,w_3392/q_auto/v1740000001/fom-website/2023/Mercedes/W15%20launch/Mercedes-AMG%20W15%20E%20PERFORMANCE%20-%20Lewis%20Hamilton%20-%20Front%20Quarter.webp" alt="F1 Car">
+</section>
  

@@ -1,2 +1,247 @@
-# LandingPage_CC14
-new landing page because the first one was bad
+<!-- Bai,Kyle Ihram T.
+ 24-6546-672
+ CC14- 2J -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Esports League</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: #111;
+      padding: 15px 30px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      color: red;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
+     /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 50px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero img {
+      width: 40%;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: red;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+       /* FEATURES */
+    .features {
+      padding: 80px 50px;
+      text-align: center;
+    }
+      /* Puts the features in a grid */
+     .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+     /* COUNTDOWN */
+    .countdown {
+      text-align: center;
+      padding: 50px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        max-width: 120%;
+      }
+
+      .hero img {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+<header>
+  <nav>
+    <h1>F1 Esports</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#countdown">Event</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h2>Race Into The Future of Esports</h2>
+    <p>Join the ultimate F1 Esports competition.</p>
+    <button onclick="joinNow()">Join Now</button>
+  </div>
+  <img src="https://media.formula1.com/image/upload/t_16by9Centre/c_lfill,w_3392/q_auto/v1740000001/fom-website/2023/Mercedes/W15%20launch/Mercedes-AMG%20W15%20E%20PERFORMANCE%20-%20Lewis%20Hamilton%20-%20Front%20Quarter.webp" alt="F1 Car">
+</section>
+
+<!-- Features for information -->
+<section class="features" id="features">
+  <h2>Why Join?</h2>
+  <div class="feature-grid">
+    <div class="feature">
+      <h3>Real Competition</h3>
+      <p>Race against top players.</p>
+    </div>
+    <div class="feature">
+      <h3>Live Tournaments</h3>
+      <p>Weekly races and events.</p>
+    </div>
+    <div class="feature">
+      <h3>Win Prizes</h3>
+      <p>Earn rewards and recognition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown" id="countdown">
+  <h2>Next Race Starts In:</h2>
+  <h3 id="timer"></h3>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 F1 Esports League</p>
+</footer>
+
+ <!-- JAVASCRIPT for the toggle Menu -->
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("nav-menu");
+
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+// Countdown Script to show when the next race starts
+  function showCountdown() {
+    var days = 3;
+    var hours = 5;
+    var minutes = 20;
+
+    var totalHours = (days * 24) + hours;
+
+    document.getElementById("timer").innerHTML =
+      totalHours + " hours and " + minutes + " minutes left!";
+  }
+
+  showCountdown();
+
+   // Button Interaction
+  function joinNow() {
+    alert("Welcome to F1 Esports!");
+  }
+</script>
+
+</body>
+</html>

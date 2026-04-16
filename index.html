@@ -96,7 +96,7 @@
       padding: 80px 50px;
       text-align: center;
     }
-
+      /* Puts the features in a grid */
      .feature-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -121,6 +121,37 @@
       background: #111;
       text-align: center;
       padding: 20px;
+    }
+
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        max-width: 120%;
+      }
+
+      .hero img {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
     }
 
     </style>

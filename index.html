@@ -223,3 +223,16 @@
       menu.style.display = "block";
     }
   }
+// Countdown Script to show when the next race starts
+  function showCountdown() {
+    var days = 3;
+    var hours = 5;
+    var minutes = 20;
+
+    var totalHours = (days * 24) + hours;
+
+    document.getElementById("timer").innerHTML =
+      totalHours + " hours and " + minutes + " minutes left!";
+  }
+
+  showCountdown();
